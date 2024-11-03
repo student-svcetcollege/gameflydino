@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.gamecontainer {
+    background-color: blueviolet;
+    background-image: url(/dino-obstacle-game/gamepackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dino {
+    background-image: url('/dino-obstacle-game/—Pngtree—dinosaur\ tyrannosaurus\ illustration_9050027.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+}
+
+.obstacle {
+    background-image: url('/dino-obstacle-game/—Pngtree—golden\ chinese\ dragon\ a\ symbol_14681693.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50vw;
+}
+
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+
+.gameover {
+    position: relative;
+    top: 60px;
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+#scorecount {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    border: 2px solid black;
+    font-size: 30px;
+    color: rgb(21, 20, 20);
+    font-weight: bolder;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100px;
+}
+
+@keyframes dino {
+    0% { bottom: 0; }
+    50% { bottom: 400px; }
+    100% { bottom: 0; }
+}
+
+@keyframes obstacleAni {
+    0% { left: 100vw; }
+    100% { left: -10vw; }
+}
